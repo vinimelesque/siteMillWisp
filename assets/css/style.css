@@ -1,0 +1,433 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #15427A;
+    --first-color-alt: #00B3CA;
+    --first-color-light: #54BA9A;
+    --first-color-lighten: #f0f3ff;
+    --second-color: #F88745;
+    --title-color: #1f2f70;
+    --text-color: #6c7493;
+    --text-color-light: #b8bbc7;
+    --border-color: #f5f7ff;
+    --body-color: #fff;
+    --container-color: #F3F3F3;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Montserrat', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: .3s;
+    /* For animation dark mode */
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button {
+    font-family: var(--body-font);
+    outline: none;
+    border: none;
+}
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+    Color changes in some parts of 
+    the website, in dark theme 
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.section {
+    padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+}
+
+.section__title span {
+    color: var(--second-color);
+}
+
+.section__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--second-color);
+}
+
+.main {
+    overflow: hidden;
+    /* For the animations ScrollReveal*/
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+#botao-img {
+    position: absolute;
+    top: 8px;
+    /* Distância do topo */
+    left: 18px;
+    /* Distância da esquerda */
+    width: 72px;
+    /* Largura da imagem */
+    height: auto;
+    /* Altura ajustada automaticamente */
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    color: #F3F3F3;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.nav__logo i {
+    font-size: 1rem;
+}
+
+.nav__logo:hover {
+    color: var (--first-color);
+}
+
+@media screen and (max-width: 1023px) {
+
+    .nav__menu {
+        position: fixed;
+        bottom: 2rem;
+        background-color: var(--container-color);
+        box-shadow: 0 8px 24px #1f2f70;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.30rem 3rem;
+        border-radius: 1.25rem;
+        transition: .4s;
+    }
+
+    .nav__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link {
+        color: var(--text-color);
+        display: flex;
+        padding: .5rem;
+        border-radius: 50%;
+    }
+
+    .nav__link i {
+        font-size: 1.25rem;
+    }
+
+    .nav__link span {
+        display: none;
+    }
+}
+
+/* Change background header */
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1);
+}
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home {
+    background: linear-gradient(170deg,
+            hsl(0, 0%, 22%) 0%,
+            hsl(0, 0%, 6%) 30%);
+    padding-bottom: 0;
+}
+
+.home__container {
+    padding-top: 4rem;
+    row-gap: 3.5rem;
+}
+
+.home__title,
+.home__value-number {
+    color: #F3F3F3;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+}
+
+.home__description {
+    color: var(--text-color-light);
+    margin-bottom: 2rem;
+}
+
+.home__value {
+    display: flex;
+    column-gap: 2.5rem;
+}
+
+.home__value-title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+}
+
+.home__value-title span {
+    color: var(--second-color);
+}
+
+.home__value-description {
+    display: flex;
+    color: var(--text-color-light);
+    font-size: var(--smaller-font-size);
+}
+
+.home__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home__orbe {
+    width: 265px;
+    height: 284px;
+    background: linear-gradient(180deg,
+            hsl(0, 0%, 16%) 93%,
+            hsl(0, 0%, 67%) 100%);
+    border-radius: 135px 135px 0 0;
+}
+
+.home__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    display: inline-flex;
+    align-items: flex-end;
+    bottom: -1.5rem;
+    box-shadow: 0 15px 32px hsla(228, 66%, 25%, .25);
+}
+
+/*=============== BUTTON ===============*/
+
+
+/*=============== LOGOS ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== VALUE ===============*/
+
+
+/*Rotate icon and add shadows*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== SUBSCRIBE ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+/* menu para pc*/
+@media screen and (min-width: 1023px) {
+    .section {
+        padding: 7.5rem;
+        0 1rem;
+    }
+
+    .section__title {
+        font-size: 2.25rem;
+    }
+
+    .section__subtitle {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__menu {
+        width: initial;
+        margin-left: auto;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav__link {
+        color: var(--text-color-light);
+    }
+
+    .nav__link i {
+        display: none;
+    }
+
+    .active-link {
+        background: none;
+        box-shadow: none;
+        color: var(--first-color);
+        font-weight: var(--font-medium);
+    }
+
+    .change-theme {
+        margin: 0 3rem;
+        color: var(--text-color-light);
+    }
+
+    .scroll-header .nav__link,
+    .scroll-header .change-theme {
+        color: var(--text-color);
+    }
+
+    .scroll-header .active-link {
+        color: var(--first-color);
+    }
+
+    .home {
+        padding-bottom: 0;
+    }
+
+    .home__container {
+        padding-top: 5rem;
+        column-gap: 2rem;
+    }
+
+    .home__data {
+        padding-bottom: 4rem;
+    }
+
+    .home__title {
+        margin-bottom: 2rem;
+    }
+
+    .home__description,
+    .home__search {
+        margin-bottom: 3rem;
+    }
+}
