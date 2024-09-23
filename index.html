@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="assets/img/logos/PNGcatLogo.png" type="image/x-icon"> <!--  FAVICON  -->
+    <link rel="shortcut icon" href="src/assets/imgs/logos/PNGcatLogo.png" type="image/x-icon"> <!--  FAVICON  -->
 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> <!--  SWIPER CSS  -->
-    <link rel="stylesheet" href="assets/css/style.css"> <!--  CSS  -->
+    <link rel="stylesheet" href="src/css/swiper-bundle.min.css"> <!--  SWIPER CSS  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/css/style.css"> <!--  CSS  -->
 
     <title>MillWisp</title>
 </head>
@@ -21,14 +22,14 @@
     <header class="header" id="header"> <!--  Header  -->
         <nav class="nav container">
             <a href="#home" class="nav__logo">
-                <img src="assets/img/logos/logo1.png" alt="botao" id="botao-img">
+                <img src="src/assets/imgs/logos/logo1.png" alt="botao" id="botao-img">
             </a>
 
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
-                            <i class='bx bx-home-alt-2'></i>
+                            <i class='bx bx-home-alt-2' title="Home"></i>
                             <span>Home</span>
                         </a>
                     </li>
@@ -36,20 +37,22 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#estatistica" class="nav__link">
-                            <i class='bx bxs-objects-vertical-bottom'></i>
-                            <span>Estatística</span>
+                        <a href="#projeto" class="nav__link">
+                            <i class='bx bx-info-circle' title="Sobre o Projeto"></i>
+                            <span>Sobre o Projeto</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#projeto" class="nav__link">
-                            <i class='bx bx-info-circle'></i>
-                            <span>Sobre o Projeto</span>
+                        <a href="#quemSomos" class="nav__link">
+                            <i class='bx bx-user' title="Quem Somos"></i>
+                            <span>Quem Somos</span>
+                        </a>
+                    </li>
 
                     <li class="nav__item">
                         <a href="#contatos" class="nav__link">
-                            <i class='bx bx-phone'></i>
+                            <i class='bx bx-phone' title="Contatos"></i>
                             <span>Contatos</span>
                         </a>
                     </li>
@@ -70,86 +73,78 @@
                 <div class="home__data">
                     <h1 class="home__title">
                         Sistema Inteligente Para Prevenção de Doenças do Trato Urinário em Felinos
-
                     </h1>
                     <p class="home__description">
-                        A Doença do Trato Urinário Inferior Felino (DTUIF) e a Doença Renal Crônica (DRC)
-                        são problemas que atingem os gatos domésticos cerca de 9% e uma média de 1,6 a 20%,
-                        respectivamente. Essas doenças podem ocorrer devido ao crescimento do peso corporal
-                        ou obesidade, sedentarismo, estresses excessivos, dieta desequilibrada e uma menor
-                        quantidade de ingestão de água, sendo esta última um dos principais motivos pelo
-                        surgimento dessas doenças. Como estes animais normalmente necessitam de água fresca
-                        e corrente, a adoção de bebedouro acaba sendo uma melhor opção. Assim, este trabalho tem como
-                        proposta o desenvolvimento de um protótipo de bebedouro inteligente, que alinhado com a
-                        estatística e a análise de dados, visa
-                        a redução das chances de animais domésticos apresentarem sintomas de doenças do trato
-                        urinário, principalmente os felinos.
+                        Projeto de bebedouro automático para reduzir doenças urinárias em gatos,
+                        controlando fluxo e temperatura da água, fornecendo dados de hidratação aos tutores
+                        e diminuindo riscos de doenças urinárias.
                     </p>
-
                 </div>
 
                 <div class="home__value">
                     <div>
                         <h1 class="home__value-title">
-                            ESP32 <span></span>
+                            APLICATIVO <span></span>
                         </h1>
                         <span class="home__value-description">
-                            Controle, processamento <br> e conectividade.
+                            Controle, processamento e conectividade.
                         </span>
                     </div>
                     <div>
                         <h1 class="home__value-title">
-                            RFID <span></span>
+                            ARDUINO <span></span>
                         </h1>
                         <span class="home__value-description">
-                            Sensor de aproximação <br> para o felino.
+                            Integração perfeita entre aplicativo e sensores, tutor e felino.
                         </span>
-                    </div>
-                    <div>
-                        <h1 class="home__value-title">
-                            TEMP <span></span>
-                        </h1>
-                        <span class="home__value-description">
-                            Sensor de temperatura <br> da água para monitoramento.
-                        </span>
-                    </div>
-                    <div>
-                        <h1 class="home__value-title">
-                            BALANÇA <span></span>
-                        </h1>
-                        <span class="home__value-description">
-                            Sensor para aferir o consumo <br> de água do felino.
-                        </span>
-                    </div>
-                </div>
-
-                <div class="home__images">
-                    <div class="home__orbe">
-
-                    </div>
-
-                    <div class="home__img">
-                        <img src="assets/img/Bebedouro.png" alt="">
                     </div>
                 </div>
             </div>
-        </section>
+            <section class="popular section" id="popular">
+                <div class="container">
+                    <div class="popular__container swiper swiper-initialized swiper-horizontal">
+                        <div class="swiper-wrapper" id="swiper-wrapper-4a54acc6d5715ae5" aria-live="polite">
+                            <article class="popular__card swiper-slide swiper-slide-active" role="group"
+                                aria-label="1 / 14" data-swiper-slide-index="0" style="width: 700px;">
+                                <img src="src/assets/imgs/imgs_carrossel/Bebedouro.png" alt="" class="popular__img">
 
-        <!-- LOGOS //// PATROCINIOS 
-        <section class="logos section">
-            <div class="logos--container container drid">
-                <div class="logos__img"> <!-- AGRO PUSSY-->
-        <!--<img src="" alt="">
+                                <div class="popular__data">
+                                    <h3 class="popular__title">
+                                        Nosso Bebedouro
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        BLA BLA BLA
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="popular__card swiper-slide swiper-slide-active" role="group"
+                                aria-label="1 / 14" data-swiper-slide-index="0" style="width: 700px;">
+                                <img src="src/assets/imgs/imgs_carrossel/bentotec1.jpg" alt="" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h3 class="popular__title">
+                                        Protótipo Exibito na Bentotec
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Você tem ou já teve algum gato em sua residência?
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                            aria-controls="swiper-wrapper-4a54acc6d5715ae5"> 
+                            <i class="bx bx-chevron-right"></i>
+                        </div>
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                            aria-controls="swiper-wrapper-4a54acc6d5715ae5">
+                            <i class="bx bx-chevron-left"></i>
+                        </div> -->
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
                 </div>
-                <div class="logos__img"> <!-- INCLUZA-->
-        <!--<img src="" alt="">
-                </div>
-                <div class="logos__img"> <!-- WT WEB TECH-->
-        <!--  <img src="" alt="">
-                </div>
-                <div class="logos__img"> <!-- DALMATA CAFÉ-->
-        <!-- <img src="" alt="">
-                </div>
+            </section>
             </div>
         </section>
 
@@ -158,334 +153,8 @@
 
         </section> -->
 
-        <!-- VALUE / estatística-->
-        <section class="value section" id="estatistica">
+        <section class="value section" id="projeto">
             <div class="value__container container grid">
-                <!--   <div class="value__images">
-                    <div class="value__orbe"></div>
-                    <div class="value__img"> 
-
-                    </div>
-                </div> -->
-
-                <div class="value__content">
-                    <div class="value__data">
-                        <span class="section__subtitle">Dados Coletados</span>
-                        <h2 class="section__title">
-                            O que é Estatística<span>?</span>
-                        </h2>
-                        <p class="value__description">
-                            Estatística é um ramo da matemática que está muito associado à tomada de decisão.
-                            Ela é uma ciência que nos possibilita obter informações a partir da coleta, organização
-                            e análise de dados. Com base nas informações obtidas, podemos tomar decisões mais embasadas,
-                            teremos chances maiores de acertar nas escolhas que fizermos e poderemos, com mais
-                            segurança,
-                            chegar a algumas conclusões sobre os fenômenos e sobre as situações de nosso cotidiano,
-                            repleto de incertezas.
-
-                        </p>
-
-                        <br>
-                        <br>
-
-                        <h2 class="section__title">
-                            Qual a sua Importância<span>?</span>
-                        </h2>
-                        <p class="value__description">
-                        <p>A estatística nos auxilia em nosso processo de tomada de decisão, e é uma poderosa
-                            ferramenta para as escolhas não somente de indivíduos, mas também de organizações e de
-                            governos.</p>
-                        <br>
-                        <p>A estatística também nos ajuda a comparar. Podemos comparar comportamentos e resultados.</p>
-                        <br>
-                        <p>A estatística contribui também para entendermos as relações entre dois ou mais
-                            acontecimentos, auxiliando-nos a identificar mudanças em fenômenos que estamos estudando.
-                            Por exemplo, a relação entre o clima e a taxa de crescimento de uma planta, ou quantidade de
-                            água e tempo de crescimento dessa planta.</p>
-                        <br>
-                        <p>Em pesquisas científicas, a estatística é frequentemente utilizada. Se queremos encontrar
-                            quantos quilos um aparelho suporta sem perder sua eficiência ou propriedade, usamos
-                            estatística para coletar os dados, organizá-los, e agrupa-los de acordo com determinadas
-                            características que esses dados nos apresentam. Depois, os analisamos e tiramos
-                            nossas conclusões.</p>
-
-                        </p>
-
-                        <br>
-                        <br>
-
-                        <h2 class="section__title">
-                            Como a estatística se relaciona com o nosso projeto<span>?</span>
-                        </h2>
-                        <p class="value__description">
-                        <p>Na fase de desenvolvimento do protótipo, a equipe teve que analisar uma gama de dados para
-                            uma melhor tomada de decisão. Por exemplo, tivemos que medir e comparar a distância de
-                            leitura de um dispositivo RFID antes de adquirí-lo e para implementá-lo de forma funcional
-                            no corpo do protótipo.</p>
-                        <p>Além disso, avaliando os números de incidência de doenças do trato urinário em felinos,
-                            estimou-se a viabilidade do projeto e sua relevância científica para a sociedade. Dessa
-                            maneira, os integrantes decidiram prosseguir o desenvolvimento do projeto e propor melhorias
-                            em seus aspectos.</p>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--FORMULÁRIO-->
-        <section class="subscribe section">
-            <div class="subscribe__container container">
-                <h1 class="subscribe__title">
-                    Responta Nosso Formulário!
-                </h1>
-                <p class="subscribe__description">
-                    Nos ajude a conseguir maiores dados sobre
-                    você e seu felino clicando no link abaixo!
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScbq6wj0Jjduk4qbSXpMSRG_xtANmQ2iilkDOblIOxg5Crjpw/viewform"
-                    class="subscribe__button">
-                    Responda Aqui
-                </a>
-            </div>
-        </section>
-
-
-
-        <section class="popular section" id="popular">
-            <div class="container">
-                <span class="section__subtitle">Gráficos</span>
-                <h2 class="section__title">Respostas obtidas através do formulário acima
-                </h2>
-
-                <div class="popular__container swiper">
-                    <div class="swiper-wrapper">
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/1.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Gato
-                                </h3>
-
-                                <p class="popular__description">
-                                    Você tem ou já teve algum gato em sua residência?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/2.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Dieta
-                                </h3>
-
-                                <p class="popular__description">
-                                    Como é a dieta do seu gato?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/3.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Ambiente
-                                </h3>
-
-                                <p class="popular__description">
-                                    Seu gato tem livre acesso, desacompanhado de terceiros, a ambientes externos,
-                                    como ruas abertas ou ambientes em condomínio fechado?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/4.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Hábitos Hídricos
-                                </h3>
-
-                                <p class="popular__description">
-                                    Você tem conhecimento sobre os hábitos hídricos de seu gato, isto é, sobre seu
-                                    consumo de água?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/5.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Ingestão de Água
-                                </h3>
-
-                                <p class="popular__description">
-                                    Em média, quantas vezes seu gato costuma beber água? Caso tenha mais de um gato,
-                                    selecione a opção "Outro" e quantifique de cada um.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/6.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Afirmação
-                                </h3>
-
-                                <p class="popular__description">
-                                    Gatos preferem consumir água corrente, seja esta advinda de uma torneira,
-                                    chuveiro ou até mesmo do escoamento de água da chuva. Qual seu conhecimento diante
-                                    esta afirmação?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/7.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Comportamento
-                                </h3>
-
-                                <p class="popular__description">
-                                    Levando em conta a informação anterior sobre o consumo de água corrente, como
-                                    tutor de um gato, você já observou tal comportamento em seu pet?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/8.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Consumo
-                                </h3>
-
-                                <p class="popular__description">
-                                    Ainda sobre os hábitos hídricos de seu gato, como se dá seu consumo hídrico? Caso
-                                    tenha mais de um gato, selecione a opção "Outro" e descreva brevemente cada um.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/9.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Doença de Trato Urinário ou Renais Crônicas
-                                </h3>
-
-                                <p class="popular__description">
-                                    Diante ao exposto, devido a tal preferência, muitos gatos não ingerem as
-                                    quantidades adequadas de água para seu organismo e são acometidos por Doenças de
-                                    Trato Urinário ou Doenças Renais Crônicas, que muitas vezes resultam em sequelas
-                                    irreversíveis para o resto de seu ciclo de vida ou até mesmo, em numerosos casos,
-                                    levam tais animais ao falecimento. Você conhece ou já teve algum animal acometido
-                                    por tais doenças?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/10.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Adicional
-                                </h3>
-
-                                <p class="popular__description">
-                                    Caso tenha marcado "Sim, já tive" ou "Não, mas já vi" na questão anterior,
-                                    saberia informar se o animal teve complicações mais graves?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/11.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Atenção a ingestão de água
-                                </h3>
-
-                                <p class="popular__description">
-                                    Além dos gatos, cachorros braquicefálicos, isto é, cães que apresentam cabeça em
-                                    formato "achatado" e focinho "encurtado", também necessitam de atenção no que tange
-                                    a ingestão de água devido a suas dificuldades com a respiração, impulsionada pelo
-                                    calor e pela constante atividade física. Cachorros braquicefálicos são Pugs,
-                                    Bulldogs, Boxers, Shih Tzus, Lhasa Apsos, Pequinêses, dentre outras raças. Qual seu
-                                    conhecimento diante esta afirmação?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/12.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Outros Bebedores
-                                </h3>
-
-                                <p class="popular__description">
-                                    Atualmente, no mercado, encontram-se opções de bebedouros automáticos que visam
-                                    solucionar o problema dos gatos com a ingestão de água, regularmente e continuamente
-                                    bombeando a água de modo que continue corrente e mantenha seu frescor, para que
-                                    casos como esses sejam menos frequentes, entretanto, não há comprovações que os
-                                    bebedouros já encontrados reduzam a ocorrência dessas doenças em gatos. Sobre tal
-                                    afirmação, você já sabia da existência desses bebedouros no mercado? (Imagem para
-                                    ilustrar um modelo)
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/13.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Quantas pessoas comprariam?
-                                </h3>
-
-                                <p class="popular__description">
-                                    Caso não tenha um gato, leve em consideração as afirmações expostas anteriormente e
-                                    imagine-se como tutor de um.
-
-                                    De 1 a 5, quanto você compraria tal solução, isto é, um bebedouro automático e
-                                    inteligente, que, juntamente a ele, conta com as funcionalidades de um aplicativo
-                                    para visualização de tais informações e estatísticas?
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/img/graficos/14.png" alt="" class="popular__img">
-
-                            <div class="popular__data">
-                                <h3 class="popular__title">
-                                    Relevância da Proposta
-                                </h3>
-
-                                <p class="popular__description">
-                                    De 1 a 5, quanto você acredita que tal produto (bebedouro e aplicativo) sejam
-                                    úteis e tenham relevância social no dia-a-dia?
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-button-next">
-                        <i class='bx bx-chevron-right'></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class='bx bx-chevron-left'></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-         <section class="value section" id="projeto">
-            <!-- <div class="value__container container grid">
                 <!-- <div class="value__images"> -->
                 <!-- <div class="value__orbe"></div> -->
                 <!-- <div class="value__img"> -->
@@ -503,7 +172,7 @@
                     </div>
 
                     <br>
-                    <div class="value__content">
+                    <div class="popular__data">
                         <h3 class="value__data">
                             Resumo
                         </h3>
@@ -535,7 +204,7 @@
                     <br>
                     <div class="popular__data">
                         <h3 class="popular__title">
-                            Objetivo
+                            Objetivo - dq p baixo é seções com botões
                         </h3>
 
                         <p class="value__description">
@@ -582,7 +251,7 @@
                             foi realizado um levantamento bibliográfico sobre doenças urinárias em felinos e
                             seus comportamentos hídricos, seguido pela pesquisa de recursos tecnológicos para o
                             desenvolvimento do protótipo. O projeto foi estruturado com base em um bebedouro
-                            adaptado com filtros e bomba de água, e uma coleira equipada com etiquetas RFID. A
+                            adaptado com e bomba de água, e uma coleira equipada com etiquetas RFID. A
                             aplicação e desenvolvimento do projeto envolveram a integração desses componentes,
                             incluindo um microcontrolador ESP32 programado para registrar o consumo de água.
                             Testes foram realizados para verificar o funcionamento do hardware e software,
@@ -773,6 +442,7 @@
             </div>
             </div>
             </div> -->
+            </div>
         </section>
 
         <!--<div class="value__according">
@@ -799,14 +469,50 @@
             </div>
         </div> -->
 
-                <!-- INTEGRANTES -->
-                <div class="team__container">
+        <!--FORMULÁRIO-->
+            <div class="contact__container container grid">
+                <div class="contact__data">
+                    <span class="section__subtitle">Formulário</span>
+                    <h2 class="section__title">
+                        Estudo para coleta de dados<span>:</span>
+                    </h2>
+                </div>
+                <div class="subscribe__container container">
+                    <h1 class="subscribe__title">
+                        Responda nosso formulário!
+                    </h1>
+                    <p class="subscribe__description">
+                        Através deste formulário, realizaremos pesquisas para a coleta de dados qualitativos e
+                        quantitativos, a fim de integrarmos tais materiais aos nossos Trabalhos de Conclusão de Curso e
+                        participação em feiras e congressos.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScbq6wj0Jjduk4qbSXpMSRG_xtANmQ2iilkDOblIOxg5Crjpw/viewform"
+                        class="subscribe__button">
+                        Responda Aqui
+                    </a>
+                </div>
+            </div>
+
+        <!-- INTEGRANTES -->
+        <div class="team__container">
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <div class="contact__data">
+                        <span class="section__subtitle">Integrantes</span>
+                        <h2 class="section__title">
+                            Os integrantes da equipe MillWisp<span>:</span>
+                        </h2>
+                        <p class="contact__description">
+                            Gostaria de saber mais sobre cada um? Entre em contato em alguma de nossas redes
+                            sociais.
+                        </p>
+                    </div>
                     <div class="team__container main-card"> <!-- Adicionei a classe "team__container" -->
                         <div class="team__cards">
                             <div class="team__card">
                                 <div class="team__content">
                                     <div class="team__img">
-                                        <img src="assets/img/integrantes/LinkedinLima.jpeg" alt="">
+                                        <img src="src/assets/imgs/integrantes/LinkedinLima.jpg" alt="">
                                     </div>
                                     <div class="team__details">
                                         <div class="team__name">
@@ -832,13 +538,10 @@
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class="team__cards">
                             <div class="team__card">
                                 <div class="team__content">
                                     <div class="team__img">
-                                        <img src="assets/img/integrantes/LinkedinLia.jpeg" alt="">
+                                        <img src="src/assets/imgs/integrantes/LinkedinLia.jpg" alt="">
                                     </div>
                                     <div class="team__details">
                                         <div class="team__name">
@@ -864,14 +567,10 @@
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="team__cards">
                             <div class="team__card">
                                 <div class="team__content">
                                     <div class="team__img">
-                                        <img src="assets/img/integrantes/LinkedinVini.jpeg" alt="">
+                                        <img src="src/assets/imgs/integrantes/LinkedinVini.jpeg" alt="">
                                     </div>
                                     <div class="team__details">
                                         <div class="team__name">
@@ -897,20 +596,34 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- PREMIAÇÃOo -->
+
+            <section class="premiacao">
+                <div class="inspiracao">
+                    <div class="section__title">
+                        <h3>Premiação Bentotec</h3>
+                    </div>
+                    <p class="value__description">
+                        Na 14° edição da BENTOTEC, o projeto MillWisp se classificou em 1° lugar na categoria
+                        Ciências e
+                        Saúde, recebendo a medalha de ouro pela equipe de avaliação do evento.
+                    </p>
+                    <div class="inspiracao-imagens">
+                        <img src="src/assets/imgs/premiacao/premiacao1.png" alt="Premiação Bentotec 1" class="imagem1">
+                        <img src="src/assets/imgs/premiacao/premiacao2.png" alt="Premiação Bentotec 2" class="imagem2">
+                    </div>
+                </div>
+            </section>
 
 
-                <!-- CONTACT -->
-                <section class="contact section" id="contact">
-                    <div class="contact__container container grid">
-                        <div class="contact__images">
-                            <div class="contact__img">
-
-                            </div>
-                        </div>
+            <!-- CONTACT -->
+            <section class="contact__section" id="contact">
+                <div class="contact__container container grid">
+                    <div class="contact__images">
                         <div class="contact__content">
                             <div class="contact__data">
                                 <span class="section__subtitle">Nossos Contatos</span>
@@ -924,24 +637,6 @@
                             </div>
 
                             <div class="div contact__card">
-                                <div class="contact__card-box">
-                                    <div class="contact__card-info">
-                                        <i class='bx bxl-instagram'></i>
-                                        <div>
-                                            <h3 class="contact__card-title">
-                                                Instagram
-                                            </h3>
-                                            <p class="contact__card-description">
-                                                Visite já a nossa principal Rede Social
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <a href="https://www.instagram.com/millwisp/" class="button contact__card-button">
-                                        Acesse Já
-                                    </a>
-                                </div>
-
                                 <div class="contact__card-box">
                                     <div class="contact__card-info">
                                         <i class='bx bxl-github'></i>
@@ -962,19 +657,37 @@
 
                                 <div class="contact__card-box">
                                     <div class="contact__card-info">
-                                        <i class='bx bx-link'></i>
+                                        <i class='bx bxl-instagram'></i>
                                         <div>
                                             <h3 class="contact__card-title">
-                                                LinkTree
+                                                Instagram
                                             </h3>
                                             <p class="contact__card-description">
-                                                Nosso LinkTree
+                                                Visite já a nossa principal Rede Social
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <a href="https://www.instagram.com/millwisp/" class="button contact__card-button">
+                                        Acesse Já
+                                    </a>
+                                </div>
+
+                                <div class="contact__card-box">
+                                    <div class="contact__card-info">
+                                        <i class='bx bx-archive-in'></i>
+                                        <div>
+                                            <h3 class="contact__card-title">
+                                                Drive
+                                            </h3>
+                                            <p class="contact__card-description">
+                                                Desenvolvimento do MillWisp
                                             </p>
                                         </div>
                                     </div>
 
                                     <a href="https://linktr.ee/millwisp" class="button contact__card-button">
-                                        Acesse Já nosso LinkTree
+                                        Acesse Já
                                     </a>
                                 </div>
 
@@ -986,11 +699,10 @@
                                                 E-Mail
                                             </h3>
                                             <p class="contact__card-description">
-                                                <span>projetomillwisp@gmail.com</span>
+                                                Envie um E-Mail para nós! <br> projetomillwisp@gmail.com
                                             </p>
                                         </div>
                                     </div>
-
                                     <a href="mailto:projetomillwisp@gmail.com" class="button contact__card-button">
                                         Enviar E-Mail
                                     </a>
@@ -998,124 +710,145 @@
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
+
+            <!-- PARCERIAS -->
+            <section class="logos__section">
+                <div class="value__data">
+                    <span class="section__subtitle">Nossos Parceiros</span>
+                    <h2 class="section__title">
+                        Parceiros fechados com o nosso projeto<span>:</span>
+                    </h2>
+                </div>
+                <div class="logos__container container grid">
+                    <div class="logos__img">
+                        <a href="https://www.instagram.com/lanhousecdhu/"><img
+                                src="src/assets/imgs/logos/WT_Web_Tech.png" alt=""
+                                title="WT Web Tech - Clique para ver mais!"></a>
+                    </div>
+                    <div class="logos__img">
+                        <a href="https://www.instagram.com/_agrosense/"><img src="src/assets/imgs/logos/AgroSense.png"
+                                alt="" title="AgroSense - Clique para ver mais!"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!--------------------  FOOTER  -------------------->
+
+            <footer class="footer" id="contatos">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="" class="footer__logo">
+                            <img src="src/assets/imgs/logos/PNGcatLogo.png" width="18px" alt=""> MillWisp
+                        </a>
+                        <p class="footer__description">
+                            Sistema inteligente integrado para prevenção de doenças do trato urinário em felinos
+                        </p>
+                    </div>
+
+                    <div class="footer__content">
+                        <div>
+                            <h3 class="footer__title">
+                                Sobre
+                            </h3>
+
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="" class="footer__link">Sobre Nós</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Artigo</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Formulário</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">
+                                Informações
+                            </h3>
+
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="" class="footer__link">Nossa Proposta</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Eletrônicos</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Bebedouro</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">
+                                Suporte
+                            </h3>
+
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="" class="footer__link">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Suporte Center</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__link">Entre em contato</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">
+                                Siga-nos
+                            </h3>
+
+                            <ul class="footer__social">
+                                <li>
+                                    <a href="https://www.instagram.com/millwisp/" class="footer__social-link">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                    <a href="https://linktr.ee/millwisp" class="footer__social-link">
+                                        <i class='bx bx-link'></i>
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/1EgsmNZFuD5YyVRDtPa0IioJgwMmYWxO1/view?usp=drivesdk"
+                                        class="footer__social-link">
+                                        <i class='bx bx-book-open'></i>
+                                    </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__info container">
+                    <span class="footer__copy">
+                        &#169; Inspirado em Bedimcode. Todos os direitos reservados.
+                    </span>
+
+                    <div class="footer__privacy">
+                        <a href="">Terms & Agreements</a>
+                        <a href="">Terms & Agreements</a>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                </div>
+            </footer>
+
     </main>
-
-    <!--------------------  FOOTER  -------------------->
-    <footer class="footer section" id="contatos">
-        <div class="footer__container container grid">
-            <div>
-                <a href="" class="footer__logo">
-                    <img src="assets/img/logos/PNGcatLogo.png" width="18px" alt=""> MillWisp
-                </a>
-                <p class="footer__description">
-                    Sistema inteligente integrado para prevenção de doenças do trato urinário em felinos
-                </p>
-            </div>
-
-            <div class="footer__content">
-                <div>
-                    <h3 class="footer__title">
-                        Sobre
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="" class="footer__link">Sobre Nós</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Artigo</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Formulário</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Informações
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="" class="footer__link">Nossa Proposta</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Eletrônicos</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Bebedouro</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Suporte
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="" class="footer__link">FAQs</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Suporte Center</a>
-                        </li>
-                        <li>
-                            <a href="" class="footer__link">Entre em contato</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Siga-nos
-                    </h3>
-
-                    <ul class="footer__social">
-                        <li>
-                            <a href="https://www.instagram.com/millwisp/" class="footer__social-link">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                            <a href="https://linktr.ee/millwisp" class="footer__social-link">
-                                <i class='bx bx-link'></i>
-                            </a>
-                            <a href="https://drive.google.com/file/d/1EgsmNZFuD5YyVRDtPa0IioJgwMmYWxO1/view?usp=drivesdk"
-                                class="footer__social-link">
-                                <i class='bx bx-book-open'></i>
-                            </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer__info container">
-            <span class="footer__copy">
-                &#169; Inspirado em Bedimcode. Todos os direitos reservados.
-            </span>
-
-            <div class="footer__privacy">
-                <a href="">Terms & Agreements</a>
-                <a href="">Terms & Agreements</a>
-                <a href="">Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
-
-
 
     <!--========== SCROLL UP ==========-->
 
 
     <!-- SCROLLREVEAL -->
-    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="src/js/scrollreveal.min.js"></script>
     <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="src/js/swiper-bundle.min.js"></script>
 
     <!-- MAIN JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="src/js/main.js"></script>
 
 </body>
 
